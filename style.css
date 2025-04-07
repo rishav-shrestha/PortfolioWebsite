@@ -6,23 +6,25 @@ body
     background-color: black;
     color:white;;
 }
+/*Navigation Bar*/
 #menu
 {
-    position: relative;
-    overflow: hidden;
+position:sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: red;
 }
-/*#menu ul{
+#menu ul{
     list-style: none;
     margin: 0;
     padding:0;
-    background-color: red;
     overflow: hidden;
     font-family: 'Times New Roman', Times, serif;
     font-weight:bold;
-   }*/
+   }
 
 
-#menu ul{
+/*#menu ul{
  list-style: none;
  margin: 0;
  padding:0;
@@ -30,7 +32,7 @@ body
  overflow: hidden;
  font-family: 'Times New Roman', Times, serif;
  font-weight:bold;
-}
+}*/
 #menu ul li{
     float:left;
 }
@@ -48,12 +50,35 @@ body
 #menu ul li a:hover{
     background-color: black;
 }
-video{
-position: fixed;
-top: 0;
-z-index: -1;
-}
+/*Navigation Bar!END*/
 
+/*Home Page*/
+
+#home #background video{
+position:absolute;
+width: 100%;
+height: auto;
+top: 0;
+z-index: -99;
+}
+#home #text{
+padding-top: 210px;
+padding-left: 0px;
+padding-bottom: 210px;
+}
+#home #text h1
+{
+
+Font-size:150px
+
+}
+#home #text h2
+{
+
+Font-size:100px;
+color:red;
+}
+/*Home Page!END*/
 /* 
 #menu ul li a {
     display: block;
