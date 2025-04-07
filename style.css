@@ -58,7 +58,7 @@ position:sticky;
 position:absolute;
 width: 100%;
 height: auto;
-top: 0;
+top: -5vw;
 z-index: -99;
 }
 #home #text{
@@ -97,10 +97,37 @@ color:red;
 
 /* Extra small devices (e.g., small phones) - 600px and below */  
 @media only screen and (max-width: 600px) {
+    #menu ul li{
+        float:left;
+    }
     #menu ul li a {
         padding:2vw;
         font-size: 4vw;
       }
+      #home #background video{
+    position:absolute;
+    width: 200%;
+    height: auto;
+    right: 0vw;
+    z-index: -99;
+    }
+    #home #text{
+    padding-top: 15vh;
+    padding-left: 3vh;
+    padding-bottom: 10vh;
+    }
+    #home #text h1
+    {
+    
+    Font-size:6vh
+    
+    }
+    #home #text h2
+    {
+    
+    Font-size:5vh;
+    color:red;
+    }
  }  
 
 /* Small devices (600px and above) */  
