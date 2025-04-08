@@ -7,14 +7,22 @@ body
     color:white;;
 }
 /*Navigation Bar*/
-#menu
-{
-position:sticky;
-  top: 0;
-  overflow: hidden;
-  background-color: red;
-}
-#menu ul{
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: background 0.3s ease,padding-top 0.3s ease;
+    z-index: 999;
+  }
+  .navbar.scrolled {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: red;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  }
+.navbar ul{
     list-style: none;
     margin: 0;
     padding:0;
@@ -23,21 +31,13 @@ position:sticky;
     font-weight:bold;
    }
 
+ 
 
-/*#menu ul{
- list-style: none;
- margin: 0;
- padding:0;
- background-color: (120,120,120,0);
- overflow: hidden;
- font-family: 'Times New Roman', Times, serif;
- font-weight:bold;
-}*/
-#menu ul li{
+.navbar ul li{
     float:left;
 }
 
-#menu ul li a {
+.navbar ul li a {
     display: block;
     color: white;
     text-align: center;
@@ -47,9 +47,11 @@ position:sticky;
     font-size: 25px;
   }
     
-#menu ul li a:hover{
+  .navbar ul li a:hover{
     background-color: black;
 }
+
+
 /*Navigation Bar!END*/
 
 /*Home Page*/
@@ -61,6 +63,7 @@ height: auto;
 top: -5vw;
 z-index: -99;
 }
+ 
 #home #text{
 padding-top: 210px;
 padding-left: 0px;
@@ -79,32 +82,24 @@ Font-size:100px;
 color:red;
 }
 /*Home Page!END*/
-/* 
-#menu ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    font-size: large;
-    text-decoration: none;
-    font-size: 25px;
-  }
-  #menu ul li a:hover{
-    color: black;
-  }
-  */
+
+
 
 
 /* Extra small devices (e.g., small phones) - 600px and below */  
 @media only screen and (max-width: 600px) {
+    /*Navigation Bar*/
     #menu ul li{
         float:left;
     }
     #menu ul li a {
         padding:2vw;
         font-size: 4vw;
-      }
-      #home #background video{
+    }
+    /*Navigation Bar!END*/
+
+    /*Home Page*/
+    #home #background video{
     position:absolute;
     width: 200%;
     height: auto;
@@ -128,6 +123,7 @@ color:red;
     Font-size:5vh;
     color:red;
     }
+    /*Home Page!END*/
  }  
 
 /* Small devices (600px and above) */  
