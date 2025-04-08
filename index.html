@@ -6,9 +6,12 @@
         <meta name="author" content="Rishav Shrestha">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
     </head>
     <body>
-      <div id="menu">
+      <!-- Navigation bar -->
+      <header id="menu" class="navbar">
+        <div id="menu-inner">
         <ul>
           <li><a>Home</a></li>
           <li><a>About me</a></li>
@@ -16,28 +19,34 @@
           <li><a>Contact me</a></li>
         </ul>
       </div>
+      </header>
+
+      <!-- Home page -->
       <div id="home">
         <div id="background">
           <video autoplay muted loop>
             <source src="video/project3.mkv" type="video/mp4">
           </video>
+          <div id="text">
+            <h1>Hello</h1>
+            <h2>I am Rishav Shrestha</h2>
+          </div>
         </div>
-        
-        <div id="text">
-          <h1>Hello</h1>
-          <h2>I am Rishav Shrestha</h2>
-        </div>
-       
       </div>
+
+      <!-- About Section -->
       <div id="profile">
       <h1>About Me</h1>
+      <div id="profile-inner">
         <div id="main">
-          <p>Hello. My name is Rishav Shrestha. I am a aspriring game developer studying at xamk</p>
+          <p>Hello. My name is Rishav Shrestha. I am a aspriring game developer studying at xamk.</p>
         </div>
         <div id="aside">
         </div>
-        <a></a>
       </div>
+      </div>
+
+      <!-- Project Section -->
       <div id="project">
         <h1>Projects</h1>
         <div id="main">
@@ -46,6 +55,8 @@
         <div id="aside">
         </div>
       </div>
+
+      <!-- Contact Section -->
       <div id="Contact">
         <h1>Contact me</h1>
         <div id="main">
@@ -61,8 +72,11 @@
           </form>
         </div>
       </div>
-    </body>
-    <footer>
+
+      <!-- Footer -->
+      <footer>
       
-    </footer>
+      </footer>
+    </body>
+   
 </html>
