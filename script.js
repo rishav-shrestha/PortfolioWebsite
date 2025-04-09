@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.classList.toggle('scrolled', window.scrollY > 100);
     navl.classList.toggle('scrolled', window.scrollY > 100);
     home.classList.toggle('scrolled', window.scrollY > 100);
-    footer.classList.toggle('bottom',scrollPosition + viewportHeight >= documentHeight - 50);
+    footer.classList.toggle('bottom',scrollPosition + viewportHeight >= documentHeight - 100);
     footer.classList.toggle('scrolled', window.scrollY > 100);
     });
     typeWriter();
