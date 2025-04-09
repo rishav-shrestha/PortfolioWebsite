@@ -17,7 +17,7 @@ body {
     font-size: 50px;
     color: red;
 }
-button
+.button
 {
     height: 60px;
     width: 200px;
@@ -113,16 +113,18 @@ button:hover
 .home #text {
     position: absolute;
     padding-top: 30vh;
-    padding-left: 0;
+    
     z-index: 2;
 }
 
 .home #text h1 {
     font-size: 150px;
+    padding-left: 15vh;
 }
 
 .home #text h2 {
     font-size: 100px;
+    padding-left: 10vh;
     color: red;
 }
 
@@ -139,7 +141,7 @@ button:hover
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the video fills the entire container */
+    object-fit: cover; 
     margin: 0;
     z-index: -99;
 }
@@ -204,34 +206,35 @@ button:hover
     justify-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
-
-#project:hover {
+#project:hover{
     background-color: rgb(35, 35, 46);
 }
 
 #project-inner {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
     align-items: center;
     padding: 1vh;
 }
 
 #project-inner .main {
-    flex: 1; 
-    max-width: 100%; 
+    flex: 10vw;
 }
 
 #project-inner .aside {
-    width: 20vw;
     padding-left: 4vw;
     padding-right: 4vw;
     margin-bottom: 20px;
 }
 
 #project-inner .aside img {
-    max-width: 450px;
-    height: 450px;
-    border: rgb(40, 39, 54) 3px solid;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: white 3px solid;
     object-fit: cover;
 }
 
@@ -251,25 +254,100 @@ button:hover
     align-items: center;
     padding: 1vh;
 }
-.footer {
+/*Footer*/
+footer {
+    padding: 15px;
+    background-color: rgb(21, 20, 29);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+footer .title {
+    font-size: 40px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+
+#footer-inner {
+    display: flex;
+    flex-direction: row;
+
+    padding: 1vh;
+}
+
+#footer-inner .main {
+    flex: 1; 
+    justify-items: center;
+    max-width: 100%; 
+}
+
+#footer-inner .aside {
+    flex:1;
+    width: 20vw;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+#footer-inner .aside iframe {
+    width: 400px;
+    height: 400px;
+    border: rgb(40, 39, 54) 3px solid;
+    object-fit: cover;
+}
+.footersticky {
     position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 0px;
-
     background-color: red;
+    transition: background-color 0.7s ease;
     text-align: center;
     z-index: 1000; 
 }
-.footer.scrolled{
+.footersticky.scrolled{
     position:fixed;
+}
+.footersticky.bottom{
+
+    background-color: rgb(21, 20, 29);
+
 }
 footer p{
     margin: 0px;
 }
+/*Social icons*/
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #983b3b;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #983b3b;
+    color: white;
+  }
+  .fa-github{
+    background: #983b3b;
+    color: white;
+  }
+  .fa-youtube{
+    background: #983b3b;
+    color: white;
+  }
+  
 /* Responsive Styling */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     body {
         font-size: 20px;
         line-height: 30px;
@@ -309,8 +387,8 @@ footer p{
         padding: 15px;
     }
 
-    #home #text {
-        padding-top: 15vh;
+    #text {
+        padding-top: 1vh;
         padding-left: 5vw;
         text-align: center;
     }
@@ -329,6 +407,15 @@ footer p{
     }
 
     #profile-inner .aside img {
+        max-width: 90vw;
+        height: auto;
+    }
+    #project-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #project-inner .aside img {
         max-width: 90vw;
         height: auto;
     }
