@@ -2,11 +2,16 @@
 document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector('.navbar');
     const home = document.querySelector('.home');
-    const footer = document.querySelector('.footer');
+    const footer = document.querySelector('.footersticky');
     window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 100);
-      home.classList.toggle('scrolled', window.scrollY > 100);
-      footer.classList.toggle('scrolled', window.scrollY > 100);
+    nav.classList.toggle('scrolled', window.scrollY > 100);
+    home.classList.toggle('scrolled', window.scrollY > 100);
+    
+    var scrollPosition = window.scrollY;
+    var documentHeight = document.documentElement.scrollHeight;
+    var viewportHeight = window.innerHeight;
+    footer.classList.toggle('bottom',scrollPosition + viewportHeight >= documentHeight - 50);
+    footer.classList.toggle('scrolled', window.scrollY > 100);
     });
     typeWriter();
   });
@@ -25,7 +30,7 @@ const images = [
   ];
 
   var currentIndex = 0;
-  setInterval(cycleImages, 100);
+  setInterval(cycleImages, 3000);
 
   function cycleImages() {
     const imgElement = document.getElementById('project-img');
@@ -34,29 +39,37 @@ const images = [
   }
 
   var i = 0;
-  var txt = 'I am Rishav Shrestha';
-  var speed = 100;
+  const txt = [
+    'I am Rishav Shrestha.',
+    'I am a Game Developer.',
+    'I am a 3d Developer.',
+    'I am a Student.'
+  ];
+  txtindex=0;
+  var typespeed = 200;
+  var delspeed = 50;
   
   function type() {
-    if (i < txt.length) {
-      document.getElementById("hometitle").innerHTML += txt.charAt(i);
+    if (i < txt[txtindex].length) {
+      document.getElementById("hometitle").innerHTML += txt[txtindex].charAt(i);
       i++;
-      setTimeout(type, speed);
+      setTimeout(type, typespeed);
     }
     else
     {
-    setTimeout(del, 500);
+    setTimeout(del, 2000);
     }
   }
   function del() {
     if (i >4) {
       document.getElementById("hometitle").innerHTML =document.getElementById("hometitle").innerHTML.substring(0, document.getElementById("hometitle").innerHTML.length - 1);
       i--;
-      setTimeout(del, speed);
+      setTimeout(del, delspeed);
     }
     else
     {
-    setTimeout(type, 500);
+    txtindex = (txtindex + 1) % txt.length;  
+    setTimeout(type, 10);
     }
   }
 
