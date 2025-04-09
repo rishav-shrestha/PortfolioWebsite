@@ -309,7 +309,7 @@ footer .title {
 }
 .footersticky.bottom{
 
-    background-color: rgb(21, 20, 29);
+    background-color: rgba(21, 20, 29, 0);
 
 }
 footer p{
@@ -496,5 +496,61 @@ body {
   }
 /* Extra Large Devices - Above 2k */  
 @media only screen and (min-width: 1440px) {
-  
+    body {
+        font-size: 2.6vh;
+        line-height: 7vh;
+    }
+    .button
+    {
+        height: 6vh;
+        width: 9vw;
+        border: white solid 2px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 2vh;
+        color: white;
+        background-color: red;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    .title {
+        font-size: 5.5vh;
+        color: red;
+    }
+    .home #text h1 {
+        font-size: 10vh;
+        padding-left: 15vh;
+    }
+    
+    .home #text h2 {
+        font-size: 15vh;
+        padding-left: 10vh;
+        color: red;
+    }
+    .navbar ul li a {
+        font-size: 3vh;
+        padding: 2vh;
+    }
+    #profile-inner .aside img {
+        max-width: none;
+        width: 30vw;
+        height: 30vw;
+        border: white 3px solid;
+        object-fit: cover;
+    }
+    #project-inner .aside img {
+        max-width: none;
+        width: 30vw;
+        height: 30vw;
+        border: white 3px solid;
+        object-fit: cover;
+    }
+ 
+    #footer-inner .aside iframe {
+    width: 30vw;
+    height: 30vw;
+    border: rgb(40, 39, 54) 3px solid;
+    object-fit: cover;
+    
+    }
 }
