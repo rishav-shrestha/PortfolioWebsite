@@ -3,7 +3,7 @@ body
     overflow-x: hidden;
     margin: 0px;
     padding: 0px;
-    background-color: black;
+    background-color: rgb(29, 28, 41);
     color:white;;
 }
 /*Navigation Bar*/
@@ -55,35 +55,73 @@ body
 /*Navigation Bar!END*/
 
 /*Home Page*/
-
-#home #background video{
-position:absolute;
-width: 100%;
-height: auto;
-top: -5vw;
-z-index: -99;
-}
- 
 #home #text{
+position:absolute;
 padding-top: 210px;
 padding-left: 0px;
-padding-bottom: 210px;
+z-index: 2;
 }
+
 #home #text h1
 {
 
 Font-size:150px
 
 }
+
 #home #text h2
 {
 
 Font-size:100px;
 color:red;
 }
+#background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* this is key */
+    overflow: hidden;
+  }
+#home #background video{
+position:relative;
+width: 100%;
+height: 100%;
+top: -5vw;
+object-fit: cover;
+margin: 0px;
+z-index: -99;
+}
+
+#background .overlay {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(29, 28, 41), rgba(0, 0, 0, 0));
+    z-index: 0;
+    pointer-events: none;
+  }
+
 /*Home Page!END*/
 
+/*About Page*/
+#profile 
+{
+    position:relative;
+    padding-bottom: 15px;
+    margin: 0px;
+   
+}
 
+#profile .heading
+{
+    Font-size:50px;
+    color:red;
+}
+#profile-inner
+{
+    padding: 30px;
+}
 
 
 /* Extra small devices (e.g., small phones) - 600px and below */  
