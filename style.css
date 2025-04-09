@@ -4,7 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(29, 28, 41);
-    font-size: 35px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
     line-height: 50px;
     text-align: justify;
     text-justify: inter-word;
@@ -15,9 +17,23 @@ body {
     font-size: 50px;
     color: red;
 }
-a{
-    text-decoration: none;
+button
+{
+    height: 60px;
+    width: 200px;
+    border: white solid 2px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 28px;
     color: white;
+    background-color: red;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+button:hover
+{
+    border: rgb(30, 33, 58) solid 2px;
+    background-color: rgb(0, 0, 0);
 }
 
 /* Navigation Bar */
@@ -142,14 +158,14 @@ a{
 
 /* About Page */
 #profile {
+    margin: 3vw;
     padding: 15px;
     background-color: rgb(21, 20, 29);
     justify-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 #profile:hover{
-    padding: 15px;
     background-color: rgb(35, 35, 46);
-    justify-items: center;
 }
 
 #profile-inner {
@@ -178,6 +194,61 @@ a{
     height: auto;
     border: white 3px solid;
     object-fit: cover;
+}
+
+/* project Page */
+#project {
+    margin: 3vw;
+    padding: 15px;
+    background-color: rgb(21, 20, 29);
+    justify-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#project:hover {
+    background-color: rgb(35, 35, 46);
+}
+
+#project-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1vh;
+}
+
+#project-inner .main {
+    flex: 1; 
+    max-width: 100%; 
+}
+
+#project-inner .aside {
+    width: 20vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    margin-bottom: 20px;
+}
+
+#project-inner .aside img {
+    max-width: 450px;
+    height: 450px;
+    border: rgb(40, 39, 54) 3px solid;
+    object-fit: cover;
+}
+
+/* Contact Page */
+#contact {
+    margin: 3vw;
+    padding: 15px;
+    background-color: rgb(21, 20, 29);
+    justify-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#contact-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh;
 }
 
 /* Responsive Styling */
