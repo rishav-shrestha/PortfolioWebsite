@@ -238,6 +238,7 @@ button:hover
 /* Contact Page */
 #contact {
     margin: 3vw;
+    margin-bottom: 6vw;
     padding: 15px;
     background-color: rgb(21, 20, 29);
     justify-items: center;
@@ -250,7 +251,23 @@ button:hover
     align-items: center;
     padding: 1vh;
 }
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px;
 
+    background-color: red;
+    text-align: center;
+    z-index: 1000; 
+}
+.footer.scrolled{
+    position:fixed;
+}
+footer p{
+    margin: 0px;
+}
 /* Responsive Styling */
 @media only screen and (max-width: 768px) {
     body {
