@@ -1,40 +1,63 @@
-body
-{
+/* General Styling */
+body {
     overflow-x: hidden;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     background-color: rgb(29, 28, 41);
-    color:white;;
+    font-size: 35px;
+    line-height: 50px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white;
 }
-/*Navigation Bar*/
+
+.title {
+    font-size: 50px;
+    color: red;
+}
+
+/* Navigation Bar */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    transition: background 0.3s ease,padding-top 0.3s ease;
+    padding: 20px;
+    transition: background 0.3s ease, padding 0.3s ease;
     z-index: 999;
-  }
-  .navbar.scrolled {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    background-color: transparent;
+}
+.navbar-toggle {
+    display: none;
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.navbar.scrolled {
+    padding: 0;
     background: red;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  }
-.navbar ul{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar #menu-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar ul {
     list-style: none;
     margin: 0;
-    padding:0;
-    overflow: hidden;
+    padding: 0;
+    display: flex;
     font-family: 'Times New Roman', Times, serif;
-    font-weight:bold;
-   }
+    font-weight: bold;
+}
 
- 
-
-.navbar ul li{
-    float:left;
+.navbar ul li {
+    margin-left: 20px;
 }
 
 .navbar ul li a {
@@ -42,139 +65,185 @@ body
     color: white;
     text-align: center;
     padding: 16px;
-    font-size: large;
-    text-decoration: none;
     font-size: 25px;
-  }
-    
-  .navbar ul li a:hover{
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
     background-color: black;
 }
 
 
-/*Navigation Bar!END*/
 
-/*Home Page*/
-#home #text{
-position:absolute;
-padding-top: 210px;
-padding-left: 0px;
-z-index: 2;
-}
 
-#home #text h1
+/* Home Page */
+.home
 {
-
-Font-size:150px
-
-}
-
-#home #text h2
-{
-
-Font-size:100px;
-color:red;
-}
-#background {
     position: relative;
     width: 100%;
-    height: 100vh; /* this is key */
+    height: 100vh;
+    transition: height 0.3s ease;
     overflow: hidden;
-  }
-#home #background video{
-position:relative;
-width: 100%;
-height: 100%;
-top: -5vw;
-object-fit: cover;
-margin: 0px;
-z-index: -99;
+}
+.home.scrolled 
+{
+    height: 80vh;
+}
+
+.home #text {
+    position: absolute;
+    padding-top: 30vh;
+    padding-left: 0;
+    z-index: 2;
+}
+
+.home #text h1 {
+    font-size: 150px;
+}
+
+.home #text h2 {
+    font-size: 100px;
+    color: red;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+ #background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the entire container */
+    margin: 0;
+    z-index: -99;
 }
 
 #background .overlay {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     background: linear-gradient(to top, rgb(29, 28, 41), rgba(0, 0, 0, 0));
     z-index: 0;
     pointer-events: none;
-  }
-
-/*Home Page!END*/
-
-/*About Page*/
-#profile 
-{
-    position:relative;
-    padding-bottom: 15px;
-    margin: 0px;
-   
 }
 
-#profile .heading
-{
-    Font-size:50px;
-    color:red;
-}
-#profile-inner
-{
-    padding: 30px;
+/* About Page */
+#profile {
+    padding: 15px;
+    background-color: rgb(45, 44, 63);
 }
 
+#profile-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
 
-/* Extra small devices (e.g., small phones) - 600px and below */  
-@media only screen and (max-width: 600px) {
-    /*Navigation Bar*/
-    #menu ul li{
-        float:left;
-    }
-    #menu ul li a {
-        padding:2vw;
-        font-size: 4vw;
-    }
-    /*Navigation Bar!END*/
+#profile-inner .main {
+    flex: 1 1 300px;
+}
 
-    /*Home Page*/
-    #home #background video{
-    position:absolute;
-    width: 200%;
+#profile-inner .aside {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+}
+
+#profile-inner .aside img {
+    width: 100%;
+    max-width: 400px;
     height: auto;
-    right: 0vw;
-    z-index: -99;
+    border: white 3px solid;
+    object-fit: cover;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 20px;
+        line-height: 30px;
     }
-    #home #text{
-    padding-top: 15vh;
-    padding-left: 3vh;
-    padding-bottom: 10vh;
+
+    .navbar.scrolled {
+        padding: 20px;
     }
-    #home #text h1
-    {
-    
-    Font-size:6vh
-    
+
+    .navbar-toggle {
+        display: block;
     }
-    #home #text h2
-    {
-    
-    Font-size:5vh;
-    color:red;
+  
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 998;
+        background-color: red; 
     }
-    /*Home Page!END*/
- }  
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .navbar ul li {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    #home #text {
+        padding-top: 15vh;
+        padding-left: 5vw;
+        text-align: center;
+    }
+
+    #home #text h1 {
+        font-size: 8vw;
+    }
+
+    #home #text h2 {
+        font-size: 6vw;
+    }
+
+    #profile-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #profile-inner .aside img {
+        max-width: 90vw;
+        height: auto;
+    }
+}
 
 /* Small devices (600px and above) */  
-@media only screen and (min-width: 600px) {  }  
+@media only screen and (min-width: 600px) {  }
 
 /* Medium devices (e.g., tablets) - 768px and above */  
-@media only screen and (min-width: 768px) { }  
+@media only screen and (min-width: 768px) { }
 
 /* Large devices (e.g., laptops, desktops) - 992px and above */  
-@media only screen and (min-width: 992px) {  }  
+@media only screen and (min-width: 992px) {  }
 
 /* Extra large devices - 1200px and above */  
-@media only screen and (min-width: 1200px) {  }  
-
-
-
+@media only screen and (min-width: 1200px) {  }
