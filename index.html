@@ -12,23 +12,23 @@
       <!-- Navigation bar -->
       <header id="menu" class="navbar">
         <div id="menu-inner">
-        <ul>
-          <li><a>Home</a></li>
-          <li><a>About me</a></li>
-          <li><a>Projects</a></li>
-          <li><a>Contact me</a></li>
-        </ul>
-      </div>
+          <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+          <ul id="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact me</a></li>
+          </ul>
+        </div>
+      </header>
       </header>
 
       <!-- Home page -->
-      <div id="home">
+      <div id="home" class="home">
           <div id="text">
             <h1>Hello</h1>
             <h2>I am Rishav Shrestha</h2>
           </div>
-        </div>
-        
         <div id="background">
           <video autoplay muted loop>
             <source src="video/project3.mkv" type="video/mp4">
@@ -41,19 +41,22 @@
 
       <!-- About Section -->
       <div id="profile">
-      <h1 class="heading">About Me</h1>
+      <h1 class="title">About Me</h1>
       <div id="profile-inner">
-        <div id="main">
-          <p>Hello. My name is Rishav Shrestha. I am a aspriring game developer studying at xamk.</p>
+        <div class="main">
+          <p>Hi, I'm Rishav Shrestha, a 20-year-old student from Nepal, currently studying Game Technologies at Xamk in Finland.
+             I chose this field because of my genuine interest in game development. I'm comfortable working with programming languages like C#, C++, Java, and JavaScript. I also use tools like Unity, Unreal Engine, Blender, and Photoshop to support different parts of the development process — from coding to asset creation.
+             Right now, I'm focused on learning, building projects, and improving my skills as I work toward becoming a game developer.</p>
         </div>
-        <div id="aside">
+        <div class="aside">
+          <img src="image/126973.jpg" alt="">
         </div>
       </div>
       </div>
 
       <!-- Project Section -->
       <div id="project">
-        <h1>Projects</h1>
+        <h1 class="title">Projects</h1>
         <div id="main">
           <p>Some of my projects.</p>
         </div>
