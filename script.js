@@ -1,15 +1,16 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector('.navbar');
+    const navl = document.querySelector('.navlinks');
     const home = document.querySelector('.home');
     const footer = document.querySelector('.footersticky');
-    window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 100);
-    home.classList.toggle('scrolled', window.scrollY > 100);
-    
     var scrollPosition = window.scrollY;
     var documentHeight = document.documentElement.scrollHeight;
     var viewportHeight = window.innerHeight;
+    window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 100);
+    navl.classList.toggle('scrolled', window.scrollY > 100);
+    home.classList.toggle('scrolled', window.scrollY > 100);
     footer.classList.toggle('bottom',scrollPosition + viewportHeight >= documentHeight - 50);
     footer.classList.toggle('scrolled', window.scrollY > 100);
     });
