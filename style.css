@@ -65,7 +65,7 @@ button:hover
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
 }
 
 .navbar ul {
@@ -114,7 +114,6 @@ button:hover
 .home #text {
     position: absolute;
     padding-top: 30vh;
-    
     z-index: 2;
 }
 
@@ -349,8 +348,9 @@ footer p{
   
 /* Responsive Styling */
 
-/* Small and Medium devices (e.g., Smart Phones and Small Tablets) - 768px and above */  
-@media only screen and (max-width: 768px) { body {
+/* Small and Medium devices (e.g., Smart Phones and Small Tablets) - 768px and below */  
+@media only screen and (max-width: 768px) { 
+body {
     font-size: 20px;
     line-height: 30px;
 }
@@ -371,6 +371,9 @@ footer p{
 
 .navbar-toggle {
     display: block;
+}
+.navbar #menu-inner {
+    padding: 20px;
 }
 
 .navbar.scrolled ul {
@@ -410,16 +413,20 @@ footer p{
 
 #text {
     padding-top: 1vh;
-    padding-left: 5vw;
-    text-align: center;
+    text-justify:auto;
+
 }
 
 #home #text h1 {
-    font-size: 8vw;
+    padding-left: 0;
+    font-size: 15vw;
+    text-align: left;
 }
 
 #home #text h2 {
-    font-size: 6vw;
+    padding-left: 0;
+    font-size: 10vw;
+    text-align: left;
 }
 
 #profile-inner {
@@ -458,10 +465,36 @@ footer p{
     object-fit: cover;
     margin-bottom: 6vw;
 }
+.footersticky
+{
+    font-size: 20px;
+    line-height: 3vh;
+}
 }
 
-/* Large devices (e.g., laptops, desktops) - 992px and above */  
-@media only screen and (min-width: 992px) {  }
+/* Medium laptops/Small monitors (e.g., laptops, desktops) - 992px and below */  
+@media only screen and (max-width: 992px) { 
+    body {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    .home #text h1 {
+        font-size: 105px;
+        padding-left: 15vh;
+    }
+    
+    .home #text h2 {
+        font-size: 70px;
+        padding-left: 10vh;
+        color: red;
+    }
+}
 
-/* Extra large devices - 1200px and above */  
-@media only screen and (min-width: 1200px) {  }
+/* Standard Devices (720p-2k Resolution) - 1200px-1440px */  
+@media only screen and (max-width: 1200px) {
+
+  }
+/* Extra Large Devices - Above 2k */  
+@media only screen and (min-width: 1440px) {
+  
+}
