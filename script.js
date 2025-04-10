@@ -4,15 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const navl = document.querySelector('.navlinks');
     const home = document.querySelector('.home');
     const footer = document.querySelector('.footersticky');
-    var scrollPosition = window.scrollY;
-    var documentHeight = document.documentElement.scrollHeight;
-    var viewportHeight = window.innerHeight;
+    
     window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 100);
     navl.classList.toggle('scrolled', window.scrollY > 100);
     home.classList.toggle('scrolled', window.scrollY > 100);
-    footer.classList.toggle('bottom',scrollPosition + viewportHeight >= documentHeight - 100);
     footer.classList.toggle('scrolled', window.scrollY > 100);
+    var scrollPosition = window.scrollY;
+    var documentHeight = document.documentElement.scrollHeight;
+    var viewportHeight = window.innerHeight;
+    footer.classList.toggle('bottom',scrollPosition + viewportHeight >= documentHeight-100 );
     });
     typeWriter();
   });
