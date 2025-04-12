@@ -482,7 +482,11 @@ footer p {
 
 
 /* Extra Large Devices - 1440px and above */
+<<<<<<< HEAD
 @media only screen and (min-width: 2560px) {
+=======
+@media only screen and (min-width: 1440px) {
+>>>>>>> bf223b7005d31561d7df0ebb6e709892dd23194e
     body {
         font-size: 2.6vh;
         line-height: 7vh;
