@@ -476,21 +476,18 @@ footer p {
 
 
 /* Standard Devices - 1200px and below */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 2560px) {
     /* You can add styles here if needed */
 }
 
 
 /* Extra Large Devices - 1440px and above */
-<<<<<<< HEAD
 @media only screen and (min-width: 2560px) {
-=======
-@media only screen and (min-width: 1440px) {
->>>>>>> bf223b7005d31561d7df0ebb6e709892dd23194e
     body {
-        font-size: 2.6vh;
+        font-size: 2.7vh;
         line-height: 7vh;
     }
+
 
     .button {
         height: 6vh;
@@ -504,12 +501,12 @@ footer p {
     }
 
     .home #text h1 {
-        font-size: 10vh;
+        font-size: 15vh;
         padding-left: 15vh;
     }
 
     .home #text h2 {
-        font-size: 15vh;
+        font-size: 10vh;
         padding-left: 10vh;
     }
 
@@ -528,5 +525,10 @@ footer p {
     #footer-inner .aside iframe {
         width: 30vw;
         height: 30vw;
+    }
+    footer .title {
+        font-size: 5.5vh;
+        text-align: center;
+        color: rgb(255, 255, 255);
     }
 }
