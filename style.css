@@ -5,8 +5,7 @@ body {
     padding: 0;
     background-color: rgb(29, 28, 41);
     font-size: 25px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 50px;
     text-align: justify;
     text-justify: inter-word;
@@ -22,7 +21,7 @@ body {
     height: 60px;
     width: 200px;
     border: white solid 2px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 28px;
     color: white;
@@ -353,9 +352,9 @@ footer p {
 /* Responsive Styling */
 
 @media only screen and (max-width: 600px) {
-    body {
-        font-size: 18px;
-        line-height: 28px;
+    body,html{
+        font-size: 3.8vmin;
+        line-height: 4vmax;
     }
 
     .navbar {
@@ -435,6 +434,7 @@ footer p {
     #profile-inner,
     #project-inner,
     #footer-inner {
+        font-size: 2.5vh;
         flex-direction: column;
         align-items: center;
     }
