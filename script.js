@@ -1,12 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector('.navbar');
-    const navl = document.querySelector('.navlinks');
     const home = document.querySelector('.home');
     const footer = document.querySelector('.footersticky');
 
     window.addEventListener('scroll', () => {
         nav.classList.toggle('scrolled', window.scrollY > 100);
-        navl.classList.toggle('scrolled', window.scrollY > 100);
         home.classList.toggle('scrolled', window.scrollY > 100);
         footer.classList.toggle('scrolled', window.scrollY > 100);
 
@@ -50,7 +48,8 @@ let i = 0;
 const txt = [
     'I am Rishav Shrestha.',
     'I am a Game Developer.',
-    'I am a 3d Developer.',
+    'I am a Programmer.',
+    'I am a 3d Modeler.',
     'I am a Student.'
 ];
 let txtindex = 0;

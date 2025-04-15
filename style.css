@@ -64,6 +64,7 @@ button:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+
 .navbar #menu-inner {
     display: flex;
     justify-content: space-between;
@@ -101,7 +102,7 @@ button:hover {
 /* Home Page */
 .home {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     transition: height 0.3s ease;
     overflow: hidden;
@@ -351,7 +352,113 @@ footer p {
 
 /* Responsive Styling */
 
-/* Small and Medium Devices - 768px and below */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar ul {
+        margin-top: 3vw;
+    }
+
+    .navbar ul li {
+        margin-left: 0px;
+    }
+
+    .navbar.scrolled {
+        padding: 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar #menu-inner {
+        padding: 20px;
+    }
+
+    .navbar.scrolled ul li {
+        background-color: red;
+    }
+
+    .navbar.scrolled ul,
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 998;
+        background-color: rgba(0, 0, 0, 0.123);
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .navbar ul li {
+        text-align: center;
+        width: 100vw;
+        margin: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    #text {
+        padding-top: 1vh;
+        text-justify: auto;
+    }
+
+    #home #text h1,
+    #home #text h2 {
+        padding-left: 0;
+        text-align: left;
+    }
+
+    #home #text h1 {
+        font-size: 18vw;
+    }
+
+    #home #text h2 {
+        font-size: 12vw;
+    }
+
+    #profile-inner,
+    #project-inner,
+    #footer-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #profile-inner .aside img,
+    #project-inner .aside img {
+        max-width: 85vw;
+        height: auto;
+    }
+
+    #footer-inner .aside iframe {
+        width: 75vw;
+        max-width: none;
+        height: 75vw;
+        margin-bottom: 5vw;
+    }
+
+    .footersticky {
+        font-size: 18px;
+        line-height: 2.5vh;
+    }
+}
+
+
 @media only screen and (max-width: 768px) {
     body {
         font-size: 20px;
@@ -380,6 +487,10 @@ footer p {
 
     .navbar #menu-inner {
         padding: 20px;
+    }
+
+    .navbar.scrolled ul li {
+        background-color: red;
     }
 
     .navbar.scrolled ul,
@@ -418,6 +529,7 @@ footer p {
     #home #text h2 {
         padding-left: 0;
         text-align: left;
+        line-height: 10vw;
     }
 
     #home #text h1 {
@@ -455,7 +567,6 @@ footer p {
 }
 
 
-/* Medium Laptops/Small Monitors - 992px and below */
 @media only screen and (max-width: 992px) {
     body {
         font-size: 24px;
@@ -475,9 +586,33 @@ footer p {
 }
 
 
-/* Standard Devices - 1200px and below */
-@media only screen and (max-width: 2560px) {
-    /* You can add styles here if needed */
+@media only screen and (max-width: 1200px) {
+    body {
+        font-size: 26px;
+        line-height: 40px;
+    }
+
+    .home #text h1 {
+        font-size: 130px;
+        padding-left: 10vh;
+    }
+
+    .home #text h2 {
+        font-size: 85px;
+        padding-left: 8vh;
+        color: red;
+    }
+
+    .navbar ul li a {
+        font-size: 22px;
+        padding: 18px;
+    }
+
+    #footer-inner .aside iframe {
+        width: 70vw;
+        height: 70vw;
+    }
 }
+
 
 
