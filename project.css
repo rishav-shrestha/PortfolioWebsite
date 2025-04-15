@@ -167,61 +167,52 @@ button:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-#projects:hover {
-    background-color: rgb(35, 35, 46);
-}
-
-#projects-inner {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0;
-    align-items: flex-start;
-    padding: 1vh;
-}
 #project-title
 {
-color: red;
+    color: red;
 }
 #project-subtitle
 {
-color: white;
+    color: white;
 }
-#project-wrapper {
+
+#projects-inner
+{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap; 
-    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
-#project-wrapper #main
+.project-wrapper
 {
-    padding: 50px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(16, 15, 22);
-}
-#profile-inner .aside img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border: white 3px solid;
-    object-fit: cover;
-}
-#project-wrapper #aside {
-    min-width: 50%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color:black;
-    background-color: white;
-    padding-top: 50px;
 
-
-  
+    padding: 30px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex: 1 1 900px;
+    transition: background-color 0.3s ease, transform 0.3s ease ;
 }
+.project-wrapper:hover
+{
+    transform: scale(1.02);
+    background-color: rgb(40, 37, 56);
+}
+
+#main
+{
+    flex: 0 0 50%;
+}
+#aside
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 0 0 50%;
+}
+
 
 /* Contact Page */
 #contact {
