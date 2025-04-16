@@ -1,82 +1,88 @@
 @import url('root.css');
 
-/* General Styling */
-
-#background video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
-    z-index: -99;
-}
-
-#background .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background: linear-gradient(to top, var(--background), rgba(0, 0, 0, 0));
-    z-index: 0;
-    pointer-events: none;
-}
-
-
-/* CV */
-#cv {
-    margin: 3vw;
-    padding: 15px;
-    background-color: var(--highlight);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-#cv-inner {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; 
-    align-items: stretch;
-    background-color: var(--accent2);
-    min-height: 2000px;
-}
-
-#cv-inner #main
-{
-    padding: 50px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(16, 15, 22);
-}
-#cv-inner #main img
-{
-    border-radius: 50%;
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-}
-#cv-inner #aside {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: var(--accent2);
-    color:var(--accenthover);
-    padding-top: 50px;
-    padding-left: 4vw;
-    padding-right: 4vw;
-
-  
-}
-
-#cv-inner #aside .CV-heading
-{
-    color: var(--accenthover);
-}
+    /* General Styling */
+    .home #text {
+        padding-top: 10vh;
+    }
+    .home #text h2 {
+        padding-left: 0;
+        text-align: center;
+    }
+    #background video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0;
+        z-index: -99;
+    }
+    
+    #background .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: linear-gradient(to top, var(--background), rgba(0, 0, 0, 0));
+        z-index: 0;
+        pointer-events: none;
+    }
+    
+    
+    /* CV */
+    #cv {
+        margin: 3vw;
+        padding: 15px;
+        background-color: var(--highlight);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    #cv-inner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap; 
+        align-items: stretch;
+        background-color: var(--accent2);
+        min-height: 2000px;
+    }
+    
+    #cv-inner #main
+    {
+        padding: 50px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(16, 15, 22);
+    }
+    #cv-inner #main img
+    {
+        border-radius: 50%;
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+    }
+    #cv-inner #aside {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--accent2);
+        color:var(--accenthover);
+        padding-top: 50px;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    
+    
+    }
+    
+    #cv-inner #aside .CV-heading
+    {
+        color: var(--accenthover);
+    }
 
 
 /* Responsive Styling */
@@ -174,3 +180,19 @@
 }
 
 
+@media only screen and (max-width: 1200px) and (min-width:992px) {
+    #cv-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        min-height: 2000px;
+    }
+
+    #cv-inner #main {
+        padding: 50px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

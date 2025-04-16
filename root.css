@@ -132,6 +132,7 @@
   
   .home #text h1 {
       font-size: 150px;
+      line-height: 160px;
       padding-left: 15vh;
       color: var(--accent2);
       text-align: start;
@@ -143,6 +144,12 @@
       text-align: start;
       color: var(--accent);
   }
+
+  .home #text p {
+    font-size: 2vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
 
     #background {
         width: 100%;
@@ -322,8 +329,15 @@
         font-size: 12vw;
         line-height: 14vw;
     }
+    
+    .home #text p {
+        padding-left: 2vmax;
+        padding-right: 2vmax;
+        font-size: 3.8vmin;
+        line-height: 4vmax;
+    }
 
-    #footer-inner,{
+    #footer-inner{
         font-size: 2.5vh;
         flex-direction: column;
         align-items: center;
@@ -417,7 +431,7 @@
     #home #text h2 {
         padding-left: 0;
         text-align: left;
-        line-height: 10vw;
+        line-height: 15vw;
     }
 
     #home #text h1 {
@@ -427,6 +441,13 @@
     #home #text h2 {
         font-size: 10vw;
     }
+    .home #text p {
+        padding-left: 2vmax;
+        padding-right: 2vmax;
+        font-size: 3.8vmin;
+        line-height: 4vmax;
+    }
+
     #footer-inner {
         flex-direction: column;
         align-items: center;
@@ -450,22 +471,31 @@
 }
 
 
-@media only screen and (max-width: 992px)and(min-width: 768px) {
+@media only screen and (max-width: 992px) and (min-width: 768px) {
     body {
         font-size: 24px;
         line-height: 35px;
     }
 
     .home #text h1 {
-        font-size: 105px;
+        font-size: 10vh;
         padding-left: 15vh;
     }
 
     .home #text h2 {
-        font-size: 70px;
+        font-size: 8vh;
         padding-left: 10vh;
-        color: red;
+        line-height: 12vh;
     }
+    #footer-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    #footer-inner .aside iframe {
+        width: 75vw;
+        height: 75vw;
+    }
+   
 }
 
 
@@ -476,14 +506,17 @@
     }
 
     .home #text h1 {
-        font-size: 130px;
-        padding-left: 10vh;
+        font-size: 150px;
+        padding-left: 15vh;
+        color: var(--accent2);
+        text-align: start;
     }
-
+    
     .home #text h2 {
-        font-size: 85px;
-        padding-left: 8vh;
-        color: red;
+        font-size: 100px;
+        padding-left: 10vh;
+        text-align: start;
+        color: var(--accent);
     }
 
     .navbar ul li a {
@@ -492,7 +525,7 @@
     }
 
     #footer-inner .aside iframe {
-        width: 70vw;
-        height: 70vw;
+        width: 30vw;
+        height: 30vw;
     }
 }
