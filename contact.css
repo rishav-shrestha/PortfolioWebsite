@@ -1,3 +1,4 @@
+/* General Styling */
 :root {
     --background: rgb(29, 28, 41);
     --highlight:rgb(21, 20, 29);
@@ -6,7 +7,6 @@
     --accenthover:rgb(0, 0, 0);
     --accent2: white;
   }
-/* General Styling */
 body {
     overflow-x: hidden;
     margin: 0;
@@ -23,12 +23,6 @@ body {
 .title {
     font-size: 50px;
     color: var(--accent);
-    text-align: center;
-}
-.CV-heading {
-      
-    font-size: 50px;
-    color: var(--accent2);
 }
 
 .button {
@@ -38,15 +32,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 28px;
-    color: var(--accent);
-    background-color: red;
+    color: var(--accent2);
+    background-color: var(--accent);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 button:hover {
     border: --background solid 2px;
-    background-color: var(--accenthover);
+    background-color:var(--accenthover);
 }
 
 
@@ -66,7 +60,7 @@ button:hover {
     font-size: 35px;
     background: none;
     border: none;
-    color: var(--accent2);
+    color: --;
     cursor: pointer;
     z-index: 999;
 }
@@ -76,6 +70,7 @@ button:hover {
     background: var(--accent);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
+
 
 .navbar #menu-inner {
     display: flex;
@@ -99,7 +94,7 @@ button:hover {
 
 .navbar ul li a {
     display: block;
-    color: var(--accent);
+    color: var(--accent2);
     text-align: center;
     padding: 16px;
     font-size: 25px;
@@ -107,11 +102,11 @@ button:hover {
 }
 
 .navbar ul li a:hover {
-    background-color: var(--accent2);
+    background-color: var(--accenthover);
 }
 
 
-/* home Section */
+/* Home Page */
 .home {
     position: relative;
     width: 100vw;
@@ -125,26 +120,20 @@ button:hover {
 }
 
 .home #text {
-    padding-top: 10vh;
     position: absolute;
-    justify-items: center;
+    padding-top: 30vh;
     z-index: 2;
 }
 
 .home #text h1 {
-    font-size: 100px;
-
-}
-.home #text p {
-    font-size: 2vh;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    font-size: 150px;
+    padding-left: 15vh;
 }
 
 .home #text h2 {
-    font-size: 75px;
+    font-size: 100px;
     padding-left: 10vh;
-    color: red;
+    color: var(--accent);
 }
 
 #background {
@@ -179,55 +168,56 @@ button:hover {
 
 
 /* CV */
-#cv {
+#contact
+{
     margin: 3vw;
+    margin-bottom: 6vw;
     padding: 15px;
     background-color: var(--highlight);
+    justify-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
-
-#cv-inner {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; 
-    align-items: stretch;
-    background-color: var(--accent2);
-    min-height: 2000px;
-}
-
-#cv-inner #main
+form
 {
-    padding: 50px;
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(16, 15, 22);
 }
-#cv-inner #main img
-{
-    border-radius: 50%;
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-}
-#cv-inner #aside {
-    flex: 1;
+#contact-inner {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    background-color: var(--accent2);
-    color:var(--accenthover);
-    padding-top: 50px;
-    padding-left: 4vw;
-    padding-right: 4vw;
-
-  
+    align-items: center;
+    padding: 1vh;
+ 
+}
+.form-group
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
-#cv-inner #aside .CV-heading
-{
-    color: var(--accenthover);
+label {
+    display: block;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+    color: --;
+}
+input[type="text"], input[type="email"],input[type="number"], textarea {
+    width: 700px;
+    padding: 10px;
+    border: 1px solid --accent2;
+    border-radius: 4px;
+    font-size: 14px;
+}
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+form .button {
+   margin-top: 10px;
 }
 
 /* Footer */
