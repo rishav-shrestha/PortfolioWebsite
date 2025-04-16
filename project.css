@@ -92,6 +92,16 @@
 }
 
 
+.contact {
+    display: flex;
+    margin: 3vw;
+    margin-bottom: 6vw;
+    padding: 15px;
+    background-color: var(--highlight);
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
 
 /* Responsive Styling */
 
