@@ -254,7 +254,10 @@
         font-size: 3.8vmin;
         line-height: 4vmax;
     }
-
+    .title
+    {
+        line-height: 5.5vh;
+    }
     .navbar {
         padding: 0;
     }

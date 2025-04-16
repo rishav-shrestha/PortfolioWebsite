@@ -77,6 +77,15 @@ img {
     border-radius: 20%;
     margin: 10px;
 }
+#project-item video {
+    width: 500px;
+    height: auto;
+    border: --accent2 3px solid;
+    object-fit: cover;
+    align-self: center;
+    border-radius: 2%;
+    margin: 10px;
+}
 
 
 /* Social Icons */
@@ -123,6 +132,20 @@ img {
     #project-item .title
     {
     line-height: 12vw;
+    }
+    img {
+        width: 70vw;
+        height: auto;
+     
+    }
+    #project-item video {
+        width: 80vw;
+        height: auto;
+        border: --accent2 3px solid;
+        object-fit: cover;
+        align-self: center;
+        border-radius: 2%;
+        margin: 10px;
     }
 }
 
