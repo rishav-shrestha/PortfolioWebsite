@@ -155,24 +155,16 @@ button:hover {
 }
 
 /* Project Page */
-#projects {
+#project {
     margin: 3vw;
     padding: 15px;
     background-color: var(--highlight);
     justify-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
 }
 
-#project-title
-{
-    color: var(--accent);
-}
-#project-subtitle
-{
-    color: var(--accent2);
-}
-
-#projects-inner
+#project-inner
 {
     display: flex;
     flex-direction: row;

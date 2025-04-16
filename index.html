@@ -23,21 +23,22 @@
     </header>
 
     <!-- Home page -->
-    <div id="home" class="home">
+    <div id="home" class="home" >
       <div id="text">
-        <h1>Hello</h1>
-        <h2 id="hometitle">I am Rishav Shrestha</h2>
+        <h1 role="none">Hello</h1>
+        <h2 id="hometitle" aria-hidden="true">I am Rishav Shrestha</h2>
       </div>
       <div id="background">
-        <video autoplay muted loop>
-          <source src="video/project3.mkv" type="video/mp4">
+        <video autoplay muted loop
+        aria-label="Background Video of one of my projects">
+          <source src="video/project3.mkv" type="video/mp4" >
         </video>
         <div class="overlay"></div>
       </div>
     </div>
 
     <!-- About Section -->
-    <div id="profile" onclick="window.location.href='profile.html';">
+    <div id="profile" onclick="window.location.href='profile.html';" tabindex="0">
       <h1 class="title">About Me</h1>
       <div id="profile-inner">
         <div class="main">
@@ -46,13 +47,13 @@
             Right now, I'm focused on learning, building projects, and improving my skills as I work toward becoming a game developer.</p>
         </div>
         <div class="aside">
-          <img src="image/126973.jpg" alt="Profile Image">
+          <img src="image/126973.jpg" alt="MY Profile Image">
         </div>
       </div>
     </div>
 
     <!-- Project Section -->
-    <div id="project" onclick="window.location.href='project.html';">
+    <div id="project" onclick="window.location.href='project.html';" tabindex="0">
       <h1 class="title">Projects</h1>
       <div id="project-inner">
         <div class="main">
@@ -60,14 +61,14 @@
             Each project includes the details, approach, and tools I used along the way.</p>
         </div>
         <div class="aside">
-          <img id="project-img" src="image/project.png" alt="Project Image">
+          <img id="project-img" src="image/project.png" alt="My Projects Image">
         </div>
       </div>
     </div>
 
     <!-- Contact Section -->
     <div id="contact">
-      <h1 class="title">Contact me</h1>
+      <h1 class="title" aria-hidden="true">Contact me</h1>
       <div id="contact-inner">
         <p>Contact me from here if you want to work with me.</p>
         <Button class="button" onclick="window.location.href='contact.html';">Contact me</Button>

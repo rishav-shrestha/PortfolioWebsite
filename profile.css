@@ -1,11 +1,5 @@
-:root {
-    --background: rgb(29, 28, 41);
-    --highlight:rgb(21, 20, 29);
-    --hoverhightlight: rgb(35, 35, 46);
-    --accent:red;
-    --accenthover:rgb(0, 0, 0);
-    --accent2: white;
-  }
+@import url('root.css');
+
 /* General Styling */
 body {
     overflow-x: hidden;
