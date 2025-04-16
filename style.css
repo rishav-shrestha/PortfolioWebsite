@@ -1,38 +1,46 @@
 /* General Styling */
+:root {
+    --background: rgb(29, 28, 41);
+    --highlight:rgb(21, 20, 29);
+    --hoverhightlight: rgb(35, 35, 46);
+    --accent:red;
+    --accenthover:rgb(0, 0, 0);
+    --accent2: white;
+  }
 body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    background-color: rgb(29, 28, 41);
+    background-color: var(--background);
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 50px;
     text-align: justify;
     text-justify: inter-word;
-    color: white;
+    color: var(--accent2);
 }
 
 .title {
     font-size: 50px;
-    color: red;
+    color: var(--accent);
 }
 
 .button {
     height: 60px;
     width: 200px;
-    border: white solid 2px;
+    border: --accent2 solid 2px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 28px;
-    color: white;
-    background-color: red;
+    color: var(--accent2);
+    background-color: var(--accent);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 button:hover {
-    border: rgb(30, 33, 58) solid 2px;
-    background-color: rgb(0, 0, 0);
+    border: --background solid 2px;
+    background-color:var(--accenthover);
 }
 
 
@@ -52,14 +60,14 @@ button:hover {
     font-size: 35px;
     background: none;
     border: none;
-    color: white;
+    color: --;
     cursor: pointer;
     z-index: 999;
 }
 
 .navbar.scrolled {
     padding: 0;
-    background: red;
+    background: var(--accent);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -86,7 +94,7 @@ button:hover {
 
 .navbar ul li a {
     display: block;
-    color: white;
+    color: var(--accent2);
     text-align: center;
     padding: 16px;
     font-size: 25px;
@@ -94,7 +102,7 @@ button:hover {
 }
 
 .navbar ul li a:hover {
-    background-color: black;
+    background-color: var(--accenthover);
 }
 
 
@@ -125,7 +133,7 @@ button:hover {
 .home #text h2 {
     font-size: 100px;
     padding-left: 10vh;
-    color: red;
+    color: var(--accent);
 }
 
 #background {
@@ -153,7 +161,7 @@ button:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background: linear-gradient(to top, rgb(29, 28, 41), rgba(0, 0, 0, 0));
+    background: linear-gradient(to top, --background, rgba(0, 0, 0, 0));
     z-index: 0;
     pointer-events: none;
 }
@@ -163,13 +171,13 @@ button:hover {
 #profile {
     margin: 3vw;
     padding: 15px;
-    background-color: rgb(21, 20, 29);
+    background-color: var(--highlight);
     justify-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 #profile:hover {
-    background-color: rgb(35, 35, 46);
+    background-color: var(--hoverhightlight);
 }
 
 #profile-inner {
@@ -196,7 +204,7 @@ button:hover {
     width: 100%;
     max-width: 400px;
     height: auto;
-    border: white 3px solid;
+    border: --accent2 3px solid;
     object-fit: cover;
 }
 
@@ -205,13 +213,13 @@ button:hover {
 #project {
     margin: 3vw;
     padding: 15px;
-    background-color: rgb(21, 20, 29);
+    background-color: var(--highlight);
     justify-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 #project:hover {
-    background-color: rgb(35, 35, 46);
+    background-color: var(--hoverhightlight);
 }
 
 #project-inner {
@@ -238,7 +246,7 @@ button:hover {
     width: 100%;
     max-width: 400px;
     height: auto;
-    border: white 3px solid;
+    border: --accent2 3px solid;
     object-fit: cover;
 }
 
@@ -248,7 +256,7 @@ button:hover {
     margin: 3vw;
     margin-bottom: 6vw;
     padding: 15px;
-    background-color: rgb(21, 20, 29);
+    background-color: var(--highlight);
     justify-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
@@ -264,14 +272,14 @@ button:hover {
 /* Footer */
 footer {
     padding: 15px;
-    background-color: rgb(21, 20, 29);
+    background-color: var(--highlight);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 footer .title {
     font-size: 40px;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: var(--accent2);
 }
 
 #footer-inner {
@@ -296,7 +304,7 @@ footer .title {
 #footer-inner .aside iframe {
     width: 400px;
     height: 400px;
-    border: rgb(40, 39, 54) 3px solid;
+    border: --background 3px solid;
     object-fit: cover;
 }
 
@@ -306,7 +314,7 @@ footer .title {
     left: 0;
     width: 100%;
     padding: 0px;
-    background-color: red;
+    background-color: var(--accent);
     transition: background-color 0.7s ease;
     text-align: center;
     z-index: 1000;
@@ -317,7 +325,7 @@ footer .title {
 }
 
 .footersticky.bottom {
-    background-color: rgba(21, 20, 29, 0);
+    background-color: var(--accent);
 }
 
 footer p {
@@ -344,8 +352,8 @@ footer p {
 .fa-linkedin,
 .fa-github,
 .fa-youtube {
-    background: #983b3b;
-    color: white;
+    background: var(--accent);
+    color: var(--accent2);
 }
 
 
@@ -353,7 +361,7 @@ footer p {
 
 @media only screen and (max-width: 600px) {
     body,html{
-        font-size: 3.8vmin;
+        font-size: 2.5vh;
         line-height: 4vmax;
     }
 
@@ -433,7 +441,8 @@ footer p {
 
     #profile-inner,
     #project-inner,
-    #footer-inner {
+    #footer-inner, 
+    #contact-inner{
         font-size: 2.5vh;
         flex-direction: column;
         align-items: center;
@@ -460,8 +469,8 @@ footer p {
 
 
 @media only screen and (max-width: 768px) {
-    body {
-        font-size: 20px;
+    body,html{
+        font-size: 2.5vh;
         line-height: 30px;
     }
 
@@ -542,7 +551,8 @@ footer p {
 
     #profile-inner,
     #project-inner,
-    #footer-inner {
+    #footer-inner, 
+    #contact-inner {
         flex-direction: column;
         align-items: center;
     }
