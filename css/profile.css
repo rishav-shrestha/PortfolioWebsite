@@ -4,6 +4,7 @@
     .home #text {
         padding-top: 10vh;
     }
+    
     .home #text h2 {
         padding-left: 0;
         text-align: center;
@@ -58,6 +59,7 @@
         align-items: center;
         background-color: rgb(16, 15, 22);
     }
+
     #cv-inner #main img
     {
         border-radius: 50%;
@@ -65,6 +67,7 @@
         height: 400px;
         object-fit: cover;
     }
+
     #cv-inner #aside {
         flex: 1;
         display: flex;
@@ -83,8 +86,6 @@
     {
         color: var(--accenthover);
     }
-
-    
   
 /* Responsive Styling */
 
@@ -179,7 +180,6 @@
         padding-bottom: 2vh;
     }
 }
-
 
 @media only screen and (max-width: 1200px) and (min-width:992px) {
     #cv-inner {

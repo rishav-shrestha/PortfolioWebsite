@@ -11,6 +11,7 @@
     margin: 0;
     z-index: -99;
 }
+
 #background video {
     position: absolute;
     top: 0;
@@ -60,6 +61,7 @@
     justify-content: center;
     padding: 50px;
 }
+
 .project-item ul,
 .project-item ul li,
 .project-item .title
@@ -85,6 +87,7 @@
     border-radius: 20%;
     margin: 10px;
 }
+
 .project-item video {
     width: 500px;
     height: auto;
@@ -97,7 +100,8 @@
 
 
 /* Social Icons */
-.fa {
+.fa 
+{
     padding: 20px;
     font-size: 30px;
     width: 30px;
@@ -108,7 +112,8 @@
     transition: background-color 0.3s ease, transform 0.3s ease ;
 }
 
-.fa:hover {
+.fa:hover 
+{
     background-color: var(--accenthover);
     transform: scale(1.02);
 }
@@ -124,7 +129,8 @@
 
 /* Responsive Styling */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) 
+{
    /* Project Page */
     #project {
         margin: 3vw;
@@ -163,7 +169,8 @@
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) 
+{
    /* Project Page */
    #project 
    {

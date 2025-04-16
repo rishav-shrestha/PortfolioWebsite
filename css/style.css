@@ -70,6 +70,7 @@
     border: none;
     transition: border 0.3s ease;
 }
+
 #profile:hover #profile-inner .aside img
 {
     

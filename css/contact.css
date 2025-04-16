@@ -24,7 +24,6 @@
     pointer-events: none;
 }
 
-
 /* Contact */
 #contact
 {
@@ -35,12 +34,14 @@
     justify-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
+
 form
 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 #contact-inner {
     display: flex;
     flex-direction: column;
@@ -48,6 +49,7 @@ form
     padding: 1vh;
  
 }
+
 .form-group
 {
     display: flex;
@@ -63,6 +65,7 @@ label {
     margin-bottom: 5px;
     color: --;
 }
+
 input[type="text"], input[type="email"],input[type="number"], textarea {
     width: 700px;
     padding: 10px;
@@ -70,14 +73,15 @@ input[type="text"], input[type="email"],input[type="number"], textarea {
     border-radius: 4px;
     font-size: 14px;
 }
+
 textarea {
     resize: vertical;
     height: 150px;
 }
+
 form .button {
    margin-top: 10px;
 }
-
 
 /* Social Icons */
 .fa {
@@ -104,10 +108,8 @@ form .button {
     color: var(--accent2);
 }
 
-
 /* Responsive Styling */
 
-/* Small Devices - 600px and below */
 @media only screen and (max-width: 600px) {
 
     #contact
@@ -162,7 +164,6 @@ form .button {
        margin-top: 10px;
     }
 }
-
 
 @media only screen and (max-width: 768px) and (min-width: 600px) {
     #contact
