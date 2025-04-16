@@ -33,6 +33,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+
 #project-title
 {
     color: var(--accent);
@@ -78,7 +79,17 @@
     justify-content: center;
     flex: 0 0 50%;
 }
-
+#aside img
+{
+    border-radius: 20%;
+    border: none;
+    transition: border 0.3s ease;
+}
+.project-wrapper:hover #aside img
+{
+    
+    border: 5px solid var(--accent2);
+}
 
 
 

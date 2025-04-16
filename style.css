@@ -66,6 +66,14 @@
     height: auto;
     border: --accent2 3px solid;
     object-fit: cover;
+    border-radius: 10%;
+    border: none;
+    transition: border 0.3s ease;
+}
+#profile:hover #profile-inner .aside img
+{
+    
+    border: 5px solid var(--accent2);
 }
 
 
@@ -110,6 +118,14 @@
     height: auto;
     border: --accent2 3px solid;
     object-fit: cover;
+    border-radius: 20%;
+    border: none;
+    transition: border 0.3s ease;
+}
+#project:hover #project-inner .aside img
+{
+    
+    border: 5px solid var(--accent2);
 }
 
 
