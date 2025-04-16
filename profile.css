@@ -99,7 +99,7 @@ button:hover {
 
 .navbar ul li a {
     display: block;
-    color: var(--accent);
+    color: var(--accent2);
     text-align: center;
     padding: 16px;
     font-size: 25px;
@@ -303,10 +303,12 @@ footer p {
     text-decoration: none;
     margin: 5px 2px;
     border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease ;
 }
 
 .fa:hover {
-    opacity: 0.7;
+    background-color: var(--accenthover);
+    transform: scale(1.02);
 }
 
 .fa-facebook,
@@ -462,8 +464,11 @@ footer p {
     }
 
     .footersticky {
-        font-size: 18px;
-        line-height: 2.5vh;
+        font-size: 4vmin;
+        line-height: 2.7vh;
+    }
+    .footersticky p{
+        margin: 1vh;
     }
 }
 
@@ -519,8 +524,8 @@ footer p {
     }
 
     .navbar ul li a {
-        font-size: 20px;
-        padding: 15px;
+        font-size: 2.8vh;
+        line-height: 6vh;
     }
 
     #text {
@@ -607,8 +612,11 @@ footer p {
     }
 
     .footersticky {
-        font-size: 20px;
-        line-height: 3vh;
+        font-size: 4vmin;
+        line-height: 2.7vh;
+    }
+    .footersticky p{
+        margin: 1vh;
     }
 }
 
@@ -636,8 +644,8 @@ footer p {
     }
 
     .navbar ul li a {
-        font-size: 22px;
-        padding: 18px;
+        font-size: 2.8vh;
+        line-height: 6vh;
     }
 
     #footer-inner .aside iframe {

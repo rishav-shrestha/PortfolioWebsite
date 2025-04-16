@@ -36,10 +36,12 @@ body {
     background-color: var(--accent);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease ;
 }
 
-button:hover {
-    border: --background solid 2px;
+.button:hover {
+    border: var(--accenthover) solid 2px;
+    transform: scale(1.02);
     background-color:var(--accenthover);
 }
 
@@ -60,7 +62,7 @@ button:hover {
     font-size: 35px;
     background: none;
     border: none;
-    color: --;
+    color: var(--accent2);
     cursor: pointer;
     z-index: 999;
 }
@@ -99,9 +101,13 @@ button:hover {
     padding: 16px;
     font-size: 25px;
     text-decoration: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease ;
 }
 
 .navbar ul li a:hover {
+
+    transform: scale(1.02);
     background-color: var(--accenthover);
 }
 
@@ -174,10 +180,12 @@ button:hover {
     background-color: var(--highlight);
     justify-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease ;
 }
 
 #profile:hover {
     background-color: var(--hoverhightlight);
+    transform: scale(1.02);
 }
 
 #profile-inner {
@@ -216,10 +224,12 @@ button:hover {
     background-color: var(--highlight);
     justify-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease ;
 }
 
 #project:hover {
     background-color: var(--hoverhightlight);
+    transform: scale(1.02);
 }
 
 #project-inner {
@@ -342,10 +352,12 @@ footer p {
     text-decoration: none;
     margin: 5px 2px;
     border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease ;
 }
 
 .fa:hover {
-    opacity: 0.7;
+    background-color: var(--accenthover);
+    transform: scale(1.02);
 }
 
 .fa-facebook,
@@ -361,7 +373,7 @@ footer p {
 
 @media only screen and (max-width: 600px) {
     body,html{
-        font-size: 2.5vh;
+        font-size: 3.8vmin;
         line-height: 4vmax;
     }
 
@@ -416,8 +428,8 @@ footer p {
     }
 
     .navbar ul li a {
-        font-size: 18px;
-        padding: 12px;
+        font-size: 2.8vh;
+        line-height: 6vh;
     }
 
     #text {
@@ -437,6 +449,7 @@ footer p {
 
     #home #text h2 {
         font-size: 12vw;
+        line-height: 14vw;
     }
 
     #profile-inner,
@@ -462,13 +475,16 @@ footer p {
     }
 
     .footersticky {
-        font-size: 18px;
-        line-height: 2.5vh;
+        font-size: 4vmin;
+        line-height: 2.7vh;
+    }
+    .footersticky p{
+        margin: 1vh;
     }
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-width: 600px) {
     body,html{
         font-size: 2.5vh;
         line-height: 30px;
@@ -525,8 +541,8 @@ footer p {
     }
 
     .navbar ul li a {
-        font-size: 20px;
-        padding: 15px;
+        font-size: 2.8vh;
+        line-height: 6vh;
     }
 
     #text {
@@ -571,13 +587,16 @@ footer p {
     }
 
     .footersticky {
-        font-size: 20px;
-        line-height: 3vh;
+        font-size: 4vmin;
+        line-height: 2.7vh;
+    }
+    .footersticky p{
+        margin: 1vh;
     }
 }
 
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px)and(min-width: 768px) {
     body {
         font-size: 24px;
         line-height: 35px;
@@ -596,7 +615,7 @@ footer p {
 }
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) and (min-width:992px) {
     body {
         font-size: 26px;
         line-height: 40px;

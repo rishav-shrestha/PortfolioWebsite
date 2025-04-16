@@ -1,12 +1,5 @@
 /* General Styling */
-:root {
-    --background: rgb(29, 28, 41);
-    --highlight:rgb(21, 20, 29);
-    --hoverhightlight: rgb(35, 35, 46);
-    --accent:red;
-    --accenthover:rgb(0, 0, 0);
-    --accent2: white;
-  }
+@import url('root.css');
 body {
     overflow-x: hidden;
     margin: 0;
@@ -36,10 +29,12 @@ body {
     background-color: var(--accent);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease ;
 }
 
-button:hover {
-    border: --background solid 2px;
+.button:hover {
+    border: var(--accenthover) solid 2px;
+    transform: scale(1.02);
     background-color:var(--accenthover);
 }
 
@@ -60,7 +55,7 @@ button:hover {
     font-size: 35px;
     background: none;
     border: none;
-    color: --;
+    color: var(--accent2);
     cursor: pointer;
     z-index: 999;
 }
@@ -167,7 +162,7 @@ button:hover {
 }
 
 
-/* CV */
+/* Contact */
 #contact
 {
     margin: 3vw;
@@ -293,10 +288,12 @@ footer p {
     text-decoration: none;
     margin: 5px 2px;
     border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease ;
 }
 
 .fa:hover {
-    opacity: 0.7;
+    background-color: var(--accenthover);
+    transform: scale(1.02);
 }
 
 .fa-facebook,
@@ -366,8 +363,8 @@ footer p {
     }
 
     .navbar ul li a {
-        font-size: 18px;
-        padding: 12px;
+        font-size: 2.8vh;
+        line-height: 6vh;
     }
 
     #text {
@@ -381,63 +378,65 @@ footer p {
         font-size: 3.8vmin;
         line-height: 4vmax;
     }
-    #home #text h1,
     #home #text h2 {
         padding-left: 0;
         text-align: center;
-    }
-
-    #home #text h1 {
-        font-size: 18vw;
     }
 
     #home #text h2 {
         font-size: 12vw;
     }
 
-    .CV-heading {
-        font-size: 8vw;
-        text-align: center;
+    #contact
+    {
+        margin: 3vw;
+        margin-bottom: 6vw;
+        padding: 15px;
+        background-color: var(--highlight);
+        justify-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
-
-    #cv {
-        font-size: 5vw;
-        line-height: 6vw;
-    }
-
-    #cv-inner {
+    form
+    {
         display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        background-color: var(--accent);
-        min-height: 2000px;
-    }
-
-    #cv-inner #main {
-        padding: 50px;
-        flex: 1;
         flex-direction: column;
         align-items: center;
     }
+    #contact-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1vh;
+    
+    }
+    .form-group
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
 
-    #cv-inner #main img {
-        border-radius: 100%;
+    label {
+        display: block;
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 5px;
+        color: --;
+    }
+    input[type="text"], input[type="email"],input[type="number"], textarea {
         width: 80vw;
-        height: 80vw;
-        object-fit: cover;
+        padding: 10px;
+        border: 1px solid --accent2;
+        border-radius: 4px;
+        font-size: 14px;
     }
-
-    #cv-inner #aside {
-        font-size: 5vw;
-        line-height: 6vw;
+    textarea {
+        resize: vertical;
+        height: 150px;
     }
-
-    #cv-inner #aside li {
-        padding-bottom: 2vh;
-    }
-
-    #cv-inner #aside .CV-heading {
-        color: var(--accenthover);
+    form .button {
+       margin-top: 10px;
     }
 
     #footer-inner {
@@ -452,8 +451,11 @@ footer p {
     }
 
     .footersticky {
-        font-size: 18px;
-        line-height: 2.5vh;
+        font-size: 4vmin;
+        line-height: 2.7vh;
+    }
+    .footersticky p{
+        margin: 1vh;
     }
 }
 
@@ -464,7 +466,7 @@ footer p {
     }
 
     .navbar ul {
-        margin-top: 2.5vw;
+        margin-top: 3vw;
     }
 
     .navbar ul li {
@@ -481,6 +483,9 @@ footer p {
 
     .navbar #menu-inner {
         padding: 20px;
+    }
+    .navbar.scrolled ul li {
+        background-color: var(--accent);
     }
 
     .navbar.scrolled ul,
@@ -509,12 +514,12 @@ footer p {
     }
 
     .navbar ul li a {
-        font-size: 20px;
-        padding: 15px;
+        font-size: 2.8vh;
+        line-height: 6vh;
     }
 
     #text {
-        padding: 0;
+        padding: 10px;
         text-justify: auto;
     }
 
@@ -524,65 +529,65 @@ footer p {
         font-size: 3.8vmin;
         line-height: 4vmax;
     }
-
-    #home #text h1,
     #home #text h2 {
         padding-left: 0;
         text-align: center;
     }
 
-    #home #text h1 {
-        font-size: 15vw;
-    }
-
     #home #text h2 {
-        font-size: 10vw;
+        font-size: 12vw;
     }
 
-    body, html {
-        font-size: 6vw;
-        line-height: 3vw;
+    #contact
+    {
+        margin: 3vw;
+        margin-bottom: 6vw;
+        padding: 15px;
+        background-color: var(--highlight);
+        justify-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
-
-    .CV-heading {
-        font-size: 6vw;
-        text-align: center;
-    }
-
-    #cv {
-        font-size: 5vw;
-        line-height: 6vw;
-    }
-
-    #cv-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        min-height: 2000px;
-    }
-
-    #cv-inner #main {
-        padding: 50px;
-        flex: 1;
+    form
+    {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+    #contact-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1vh;
+    
+    }
+    .form-group
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
 
-    #cv-inner #main img {
-        border-radius: 100%;
+    label {
+        display: block;
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 5px;
+        color: --;
+    }
+    input[type="text"], input[type="email"],input[type="number"], textarea {
         width: 80vw;
-        height: 80vw;
-        object-fit: cover;
+        padding: 10px;
+        border: 1px solid --accent2;
+        border-radius: 4px;
+        font-size: 14px;
     }
-
-    #cv-inner #aside {
-        font-size: 4.7vw;
-        line-height: 6vw;
+    textarea {
+        resize: vertical;
+        height: 150px;
     }
-
-    #cv-inner #aside li {
-        padding-bottom: 2vh;
+    form .button {
+       margin-top: 10px;
     }
 
     #footer-inner {
@@ -597,8 +602,11 @@ footer p {
     }
 
     .footersticky {
-        font-size: 20px;
-        line-height: 3vh;
+        font-size: 4vmin;
+        line-height: 2.7vh;
+    }
+    .footersticky p{
+        margin: 1vh;
     }
 }
 
@@ -608,18 +616,6 @@ footer p {
         font-size: 24px;
         line-height: 35px;
     }
-    #cv-inner #main img {
-        border-radius: 100%;
-        width: 20vw;
-        height: 20vw;
-        object-fit: cover;
-    }
-
-    .home #text h1 {
-        font-size: 105px;
-        padding-left: 15vh;
-    }
-
     .home #text h2 {
         font-size: 70px;
         padding-left: 10vh;
